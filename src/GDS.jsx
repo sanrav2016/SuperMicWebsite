@@ -4,7 +4,7 @@ import { OrbitControls, useGLTF, Html } from "@react-three/drei";
 import { MutatingDots } from "react-loader-spinner";
 
 function Model(props) {
-    const { scene } = useGLTF("/39a772.glb");
+    const { scene } = useGLTF("https://litter.catbox.moe/39a772.glb");
     return <primitive object={scene} position={[-600, -100, 100]} />;
 }
 

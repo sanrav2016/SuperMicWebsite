@@ -2,12 +2,10 @@ import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, useGLTF, Html } from "@react-three/drei";
 import { MutatingDots } from "react-loader-spinner";
-import { XR, createXRStore } from "@react-three/xr"
 
-const store = createXRStore()
 
 function Model(props) {
-    const { scene } = useGLTF("output3.glb");
+    const { scene } = useGLTF("https://files.catbox.moe/earpro.glb");
     return <primitive object={scene} position={[-600, -100, 100]} />;
 }
 
@@ -32,15 +30,12 @@ function Loading() {
 export default function GDS() {
     return (
         <>
-            <button onClick={() => store.enterAR()}>Enter AR</button>
             <Canvas pixelRatio={[1, 2]} camera={{ position: [1, 1, 1] }}>
-                <XR store={store}>
-                    <ambientLight intensity={1.5} />
-                    <Suspense fallback={<Loading />}>
-                        <Model />
-                    </Suspense>
-                    <OrbitControls />
-                </XR>
+                <ambientLight intensity={1.5} />
+                <Suspense fallback={<Loading />}>
+                    <Model />
+                </Suspense>
+                <OrbitControls />
             </Canvas>
         </>
     );

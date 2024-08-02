@@ -65,48 +65,48 @@ function App() {
           <img src={blockDiagramPng} />
         </div>
       </div>
-      <div className="section p-12 !flex-col">
+      <div className="section p-24 !flex-col">
         <div className="heading-font text-5xl font-bold tracking-tighter p-4">Our team</div>
         <div className="flex flex-row flex-wrap gap-10 items-center justify-center">
           <div className="tile">
             <img src={armaanWebp} />
             <div>
-              <div className="tile-header">Armaan</div>
+              <div className="tile-header text-cyan-400">Armaan</div>
               <div className="tile-info"></div>
             </div>
           </div>
           <div className="tile">
             <img src={morganWebp} className="object-top bg-gradient-to-r from-purple-200 to-blue-200 " />
             <div>
-              <div className="tile-header">Morgan</div>
+              <div className="tile-header text-purple-300">Morgan</div>
               <div className="tile-info"></div>
             </div>
           </div>
           <div className="tile">
             <img src={vikWebp} />
             <div>
-              <div className="tile-header">Vik</div>
+              <div className="tile-header text-orange-300">Vik</div>
               <div className="tile-info"></div>
             </div>
           </div>
           <div className="tile">
             <img src={asmiWebp} />
             <div>
-              <div className="tile-header">Asmi</div>
+              <div className="tile-header text-emerald-400">Asmi</div>
               <div className="tile-info"></div>
             </div>
           </div>
           <div className="tile">
             <img src={riaJpg} />
             <div>
-              <div className="tile-header">Ria</div>
+              <div className="tile-header text-slate-400">Ria</div>
               <div className="tile-info"></div>
             </div>
           </div>
           <div className="tile">
             <img src={sanjayJpg} />
             <div>
-              <div className="tile-header">Sanjay</div>
+              <div className="tile-header text-red-400">Sanjay</div>
               <div className="tile-info"></div>
             </div>
           </div>

@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+}
+
+a {
+  color: violet;
+}
+
+.heading-font {
+  font-family: Barlow, sans-serif;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.section:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.button {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  vertical-align: middle;
+  transition: 0.3s;
+  box-shadow: 0 0.5px 0 1px white;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  scale: 1.05;
+}
+
+@media screen and (max-width: 1000px) {
+  .section {
+    flex-direction: column;
+  }
+}
+
+.tile img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tile {
+  text-align: center;
+}
+
+.tile-header {
+  font-family: Barlow, sans-serif;
+  font-size: 32px;
+  padding: 8px;
+}
+
+.tile-info {
+  font-family: Inter, sans-serif;
+}

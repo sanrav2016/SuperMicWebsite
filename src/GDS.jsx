@@ -2,6 +2,9 @@ import React, { Suspense } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, useGLTF, Html } from "@react-three/drei";
 import { MutatingDots } from "react-loader-spinner";
+import { XR, createXRStore } from "@react-three/xr"
+
+const store = createXRStore()
 
 function Model(props) {
     const { scene } = useGLTF("39a772.glb");
@@ -29,11 +32,13 @@ function Loading() {
 export default function GDS() {
     return (
         <Canvas pixelRatio={[1, 2]} camera={{ position: [1, 1, 1] }}>
-            <ambientLight intensity={1} />
-            <Suspense fallback={<Loading />}>
-                <Model />
-            </Suspense>
-            <OrbitControls />
+            <XR store={store}>
+                <ambientLight intensity={1.5} />
+                <Suspense fallback={<Loading />}>
+                    <Model />
+                </Suspense>
+                <OrbitControls />
+            </XR>
         </Canvas>
     );
 }

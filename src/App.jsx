@@ -66,7 +66,7 @@ function App() {
         </div>
       </div>
       <div className="section p-24 !flex-col">
-        <div className="heading-font text-5xl font-bold tracking-tighter p-4">Our team</div>
+        <div className="heading-font text-5xl font-bold tracking-tighter p-4 text-center">Our team</div>
         <div className="flex flex-row flex-wrap gap-10 items-center justify-center">
           <div className="tile">
             <img src={armaanWebp} />

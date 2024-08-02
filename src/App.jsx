@@ -52,7 +52,7 @@ function App() {
             </button>
           </div></div>
           :
-          <div className="bg-black h-96 relative">
+          <div className="bg-black h-[95vh] relative">
             <GDS />
           </div>
       }
